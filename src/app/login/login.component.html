@@ -1,0 +1,14 @@
+<div class="login">
+    <form class="ui form form-position" [formGroup]="loginForm">
+        <div class="ui input input-field">
+            <input type="email" placeholder="Login" name="email" formControlName="email" />
+        </div>
+        <app-validator [field]="loginForm.get('email')"></app-validator>
+        <div class="ui input input-field">
+            <input type="password" placeholder="Password" name="password" formControlName="password" />
+        </div>
+        <app-validator [field]="loginForm.get('password')"></app-validator>
+        <button class="ui inverted blue button login-button" (click)="onLogin()" type="submit">Login</button>
+        <a class="ui inverted pink button login-button" routerLink="/register">Register</a>
+    </form>
+</div>

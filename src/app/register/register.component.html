@@ -1,0 +1,18 @@
+<div class="register">
+    <form class="ui form form-position" [formGroup]="registerForm">
+        <div class="ui input input-field">
+            <input type="text" placeholder="Email" name="email" formControlName="email">
+        </div>
+        <app-validator [field]="registerForm.get('email')"></app-validator>
+        <div class="ui input input-field">
+            <input type="password" placeholder="Password" name="passwrod" formControlName="password">
+        </div>
+        <app-validator [field]="registerForm.get('password')"></app-validator>
+        <div class="ui input input-field">
+            <input type="password" placeholder="Confirm password" confirm="confirm" formControlName="confirm">
+        </div>
+        <app-validator [field]="registerForm.get('confirm')"></app-validator>
+        <button class="ui inverted pink button register-button" (click)="onRegister()" type="submit">Register</button>
+        <a class="ui inverted blue button register-button" routerLink="/login">Login</a>
+    </form>
+</div>

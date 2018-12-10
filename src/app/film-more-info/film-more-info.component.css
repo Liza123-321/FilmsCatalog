@@ -1,0 +1,90 @@
+.top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.card {
+    width: 900px;
+    margin: 10px 150px;
+    background-color: white;
+    border-radius: 4px 4px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.media {
+    margin-right: 20px;
+    max-width: 400px;
+    max-height: 600px;
+}
+
+.title {
+    width: 345px;
+    text-align: center;
+}
+
+.stars {
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    max-height: 36px;
+}
+
+.text {
+    font-family: Georgia;
+    font-size: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    color: #222222;
+}
+
+.text_pink {
+    font-family: Georgia;
+    font-size: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: #ff1a75;
+}
+.title {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    width: 345px;
+    font-weight: 600;
+    font-family: Georgia;
+    font-size: 26px;
+    color: #ff1a75;
+}
+
+.description {
+    padding-left: 20px;
+    padding-right: 30px;
+    justify-content: center;
+    display: flex;
+}
+
+.photo {
+    width: 280px;
+    height: 170px;
+    margin: 1px;
+}
+
+.login-button {
+    margin: 10px auto;
+    width: 150px;
+}
+
+.back-button {
+    margin: 10px auto;
+    width: 150px;
+}

@@ -1,0 +1,21 @@
+.form-position {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.input-field {
+    margin: 5px auto;
+    width: 250px;
+}
+
+.login-button {
+    margin: 10px auto;
+    width: 250px;
+}
+
+.login {
+    max-width: 350px;
+    margin: 20px auto;
+}

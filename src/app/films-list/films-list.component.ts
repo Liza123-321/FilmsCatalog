@@ -10,15 +10,29 @@ import { Film } from 'src/models/film';
 export class FilmsListComponent implements OnInit {
 
   films: Film[];
+  page: number;
 
-  constructor(private filmService: FilmService) { }
+  constructor(private filmService: FilmService) { 
+    this.page = 1;
+  }
 
   ngOnInit() {
     this.getFilms()
+    this.page ++;
   }
 
   getFilms(): void {
-    this.filmService.getFilms().subscribe(films => this.films = films);
+    this.filmService.getFilmsLazy(this.page).subscribe(films => this.films = films);
   }
 
+  onScroll() {
+    console.log('scrolled!!');
+    this.filmService.getFilmsLazy(this.page)
+      .subscribe((data: Film[])=> {
+        data.forEach(film => {
+          this.films.push(film);
+        });
+      })
+      this.page ++;
+  }
 }

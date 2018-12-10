@@ -24,6 +24,7 @@ import { VgControlsModule } from 'videogular2/controls';
 import { VgOverlayPlayModule } from 'videogular2/overlay-play';
 import { VgBufferingModule } from 'videogular2/buffering';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -59,7 +60,8 @@ const routes: Routes = [
     VgCoreModule,
     VgControlsModule,
     VgOverlayPlayModule,
-    VgBufferingModule
+    VgBufferingModule,
+    InfiniteScrollModule
   ],
   exports: [RouterModule],
   providers: [{

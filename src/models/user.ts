@@ -1,8 +1,9 @@
 export class User {
     email: string;
     password: string;
-    constructor(email: string, password: string) {
-        this.email = email;
-        this.password = password;
+    access_token: string;
+
+    constructor(props) {
+        Object.assign(this, props);
     }
 }

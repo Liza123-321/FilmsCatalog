@@ -1,20 +1,18 @@
-<div>
-  <div class="top" *ngFor="let comment of comments">
+ <div class="top" *ngFor="let comment of comments">
     <div class="card-comment">
       <i class="big user circle icon pink avatar"></i>
       <div class="column">
-        <div class="userName">{{comment.email}}</div>
-        <div class="commentMessage">{{comment.commentMessage}}</div>
+        <div class="name">{{comment.email}}</div>
+        <div class="message">{{comment.commentMessage}}</div>
       </div>
-      <div class="commentData">{{comment.data}}</div>
+      <div class="data">{{comment.data}}</div>
     </div>
-  </div>
 </div>
 <form *ngIf="isLogin" [formGroup]="commentForm">
   <div class="top">
     <div class="card">
-      <div class="ui input input-field textField">
-        <input placeholder="Message" name="message" id="commentMessage" type="text" formControlName="message" />
+      <div class="ui input input-field">
+        <input placeholder="Message" class="textField" name="message" id="commentMessage" type="text" formControlName="message" />
       </div>
       <button class="ui inverted pink button send-button" (click)="sendComment()">
         Send

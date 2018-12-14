@@ -1,0 +1,15 @@
+
+.login {
+    max-width: 350px;
+    margin: 20px auto;
+}
+
+.login .input-field {
+    margin: 5px auto;
+    width: 250px;
+}
+
+.login .login-button {
+    margin: 5px auto;
+    width: 250px;
+}

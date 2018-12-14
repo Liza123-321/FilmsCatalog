@@ -2,7 +2,7 @@
   <div class="card">
     <div class="title">{{film.name}}</div>
     <div class="description">
-      <img src={{film.poster}} class="media" />
+      <img src={{film.poster}} class="film-media" />
       <div class="textPadding">
         <div class="text_pink">
           Year:
@@ -38,7 +38,7 @@
   </div>
 </div>
 <div class="top">
-    <a *ngIf="!isLogin" class="ui inverted pink button login-button" routerLink="/login" >Login</a>
-    <button *ngIf="isLogin" class="ui inverted pink button login-button" (click)="logout()">Logout</button>
+    <a *ngIf="!isLogin" class="ui inverted pink button auth-button" routerLink="/login" >Login</a>
+    <button *ngIf="isLogin" class="ui inverted pink button auth-button" (click)="logout()">Logout</button>
     <button class="ui inverted blue button back-button" (click)="goBack()">Go back</button>
 </div>

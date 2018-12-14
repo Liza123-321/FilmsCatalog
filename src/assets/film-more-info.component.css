@@ -15,15 +15,10 @@
     justify-content: center;
 }
 
-.media {
+.film-media {
     margin-right: 20px;
     max-width: 400px;
     max-height: 600px;
-}
-
-.title {
-    width: 345px;
-    text-align: center;
 }
 
 .stars {
@@ -53,7 +48,7 @@
     justify-content: center;
     color: #ff1a75;
 }
-.title {
+.card .title {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -64,6 +59,7 @@
     font-family: Georgia;
     font-size: 26px;
     color: #ff1a75;
+    text-align: center;
 }
 
 .description {
@@ -79,7 +75,7 @@
     margin: 1px;
 }
 
-.login-button {
+.auth-button {
     margin: 10px auto;
     width: 150px;
 }

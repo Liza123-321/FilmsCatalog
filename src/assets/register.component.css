@@ -1,0 +1,21 @@
+.form-position {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.register {
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.register .input-field {
+    margin: 5px auto;
+    width: 250px;
+}
+
+.register .register-button {
+    margin: 5px auto;
+    width: 250px;
+}

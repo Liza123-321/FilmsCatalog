@@ -1,4 +1,4 @@
-const createUrl = path => "https://localhost:5001/api" + path;
+const createUrl = path => `https://localhost:5001/api${path}`;
 
 export const commentUrl = createUrl("/comments");
 export const loginUrl = createUrl("/user/login");

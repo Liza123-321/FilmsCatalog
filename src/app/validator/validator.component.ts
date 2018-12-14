@@ -3,8 +3,7 @@ import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-validator',
-  templateUrl: './validator.component.html',
-  styleUrls: ['./validator.component.css']
+  templateUrl: './validator.component.html'
 })
 export class ValidatorComponent implements OnInit {
   @Input() field: FormControl;

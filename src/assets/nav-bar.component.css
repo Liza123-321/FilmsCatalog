@@ -1,4 +1,8 @@
-.myNav {
+.nav {
+    margin-top: 20px;
+}
+
+.nav .myNav {
     background-color: white;
     color: black;
     display: flex;
@@ -6,11 +10,7 @@
     height: 50px;
 }
 
-.nav {
-    margin-top: 20px;
-}
-
-.login {
+.nav .login {
     max-width: 400px;
     margin: 20px auto;
 }

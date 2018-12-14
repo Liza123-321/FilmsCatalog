@@ -9,22 +9,22 @@
     justify-content: center;
 }
 
-.media {
+.film-card .media {
     height: 80%;
     width: 100%;
     border-radius: 4px 4px 0px 0px;
 }
 
-.title {
+.film-card .title {
     width: 345px;
     text-align: center;
 }
 
-.stars {
+.film-card .stars {
     display: flex;
     justify-content: center;
 }
 
-.button {
+.film-card .more {
     max-height: 36px;
 }

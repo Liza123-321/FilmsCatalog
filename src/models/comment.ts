@@ -1,11 +1,11 @@
 export class Comment {
    commentMessage: string;
    data: string;
+   filmId: number;
    email: string;
-   constructor(commentMessage: string, data: string, email: string) {
-      this.commentMessage = commentMessage;
-      this.data = data;
-      this.email = email;
+   
+   constructor(props) {
+      Object.assign(this, props)
    }
 }
 

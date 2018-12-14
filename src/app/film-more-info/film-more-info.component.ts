@@ -1,25 +1,23 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { FilmMoreInfo } from 'src/models/filmMoreInfo';
 import { FilmService } from '../film.service';
 import { Location } from '@angular/common';
-import { PhotoRes } from 'src/models/photoRes';
-import { GalleryItem } from '@ngx-gallery/core';
+import { Photo } from 'src/models/photo';
 import { ToastrService } from 'ngx-toastr';
 import { Rating } from 'src/models/rating';
+import { Film } from 'src/models/film';
 
 
 @Component({
   selector: 'app-film-more-info',
-  templateUrl: './film-more-info.component.html',
-  styleUrls: ['./film-more-info.component.css']
+  templateUrl: './film-more-info.component.html'
 })
 export class FilmMoreInfoComponent implements OnInit {
   galleryId = 'mixedExample';
-  film: FilmMoreInfo;
-  photoRes: PhotoRes[];
-  images: GalleryItem[];
+  film: Film;
+  photoRes: Photo[];
   isLogin: boolean;
+  id: number;
 
   constructor(
     private filmService: FilmService,
@@ -27,29 +25,27 @@ export class FilmMoreInfoComponent implements OnInit {
     private location: Location,
     private toastr: ToastrService) { }
 
-  ngOnInit() {
-    this.isLogin = sessionStorage.getItem('jwt_token') !== null ? true : false;
+  ngOnInit(): void {
+    this.isLogin = sessionStorage.getItem('jwt_token') !== null;
+    this.id = +this.route.snapshot.paramMap.get('id');
     this.getFilm();
     this.getPhotoRes();
   }
 
   getFilm(): void {
-    const id = +this.route.snapshot.paramMap.get('id');
-    this.filmService.getFilm(id).subscribe(film => this.film = film);
+    this.filmService.getFilm(this.id).subscribe(film => this.film = film);
   }
 
   getPhotoRes(): void {
-    const id = +this.route.snapshot.paramMap.get('id');
-    this.filmService.getFilmGallery(id).subscribe(photos => this.photoRes = photos);
+    this.filmService.getFilmGallery(this.id).subscribe(photos => this.photoRes = photos);
   }
 
   goBack(): void {
     this.location.back();
   }
 
-  onValueChange = ($event) => {
-    const id = +this.route.snapshot.paramMap.get('id');
-    this.filmService.setFilmRating(new Rating($event * 2, id))
+  onValueChange = ($event): void => {
+    this.filmService.setFilmRating(new Rating({mark: $event * 2, filmId: this.id}))
       .subscribe((data) => {
         this.getFilm();
         this.toastr.success('Success set rating!', 'Films Service');

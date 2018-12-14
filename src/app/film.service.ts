@@ -2,17 +2,15 @@ import { Injectable } from '@angular/core';
 import { Film } from 'src/models/film';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { FilmMoreInfo } from 'src/models/filmMoreInfo';
-import { PhotoRes } from 'src/models/photoRes';
-import { Comment } from 'src/models/comment';
-import { commentUrl, galleryUrl, filmsUrl, ratingUrl, filmsLazyUrl } from './consts'
+import { Photo } from 'src/models/photo';
+import { galleryUrl, filmsUrl, ratingUrl, filmsLazyUrl } from './consts'
 import { Rating } from 'src/models/rating';
 
 
 const httpOptions = {
   headers: new HttpHeaders({
     'Content-Type': 'application/json',
-    'Authorization': 'Bearer ' + sessionStorage.getItem('jwt_token')
+    'Authorization': `Bearer ${sessionStorage.getItem('jwt_token')}`
   })
 };
 
@@ -32,19 +30,14 @@ export class FilmService {
     return this.http.get<Film[]>(url);
   }
 
-  getFilm(id: number): Observable<FilmMoreInfo> {
+  getFilm(id: number): Observable<Film> {
     const url = `${filmsUrl}/${id}`;
-    return this.http.get<FilmMoreInfo>(url);
+    return this.http.get<Film>(url);
   }
 
-  getFilmGallery(id: number): Observable<PhotoRes[]> {
+  getFilmGallery(id: number): Observable<Photo[]> {
     const url = `${galleryUrl}/${id}`;
-    return this.http.get<PhotoRes[]>(url);
-  }
-
-  getFilmComments(id: number): Observable<Comment[]> {
-    const url = `${commentUrl}/${id}`;
-    return this.http.get<Comment[]>(url);
+    return this.http.get<Photo[]>(url);
   }
 
   setFilmRating(rating: Rating): Observable<any> {

@@ -1,12 +1,10 @@
 <div class="film-card">
   <img src={{film.poster}} class="media" />
   <h2 class="title">{{film.name}}</h2>
-  <br />
   <div class="stars">
     <sui-rating class="star" [ngModel]="film.averageRating/2" [maximum]="5" [isReadonly]="true"></sui-rating>
   </div>
-  <br />
-  <a class="ui pink button" routerLink="/films/{{film.id}}">
+  <a class="ui pink button more" routerLink="/films/{{film.id}}">
     More info
   </a>
 </div>

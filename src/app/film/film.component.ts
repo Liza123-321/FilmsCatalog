@@ -3,8 +3,7 @@ import { Film } from 'src/models/film';
 
 @Component({
   selector: 'app-film',
-  templateUrl: './film.component.html',
-  styleUrls: ['./film.component.css']
+  templateUrl: './film.component.html'
 })
 export class FilmComponent implements OnInit {
   @Input() film: Film;

@@ -1,15 +1,13 @@
 import { Component, OnInit, OnChanges, Input } from '@angular/core';
 import { AuthService } from '../auth.service';
 import { User } from 'src/models/user';
-import { AuthModel } from 'src/models/authModel';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Location } from '@angular/common';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  templateUrl: './login.component.html'
 })
 
 export class LoginComponent implements OnInit {
@@ -23,8 +21,8 @@ export class LoginComponent implements OnInit {
   constructor(private auth: AuthService, private location: Location, private toastr: ToastrService) { }
 
   onLogin(): void {
-    !this.loginForm.invalid && this.auth.login(new User(this.loginForm.controls.email.value, this.loginForm.controls.password.value))
-      .subscribe((data: AuthModel) => {
+    !this.loginForm.invalid && this.auth.login(new User({ email: this.loginForm.controls.email.value, password: this.loginForm.controls.password.value }))
+      .subscribe((data: User) => {
         this.location.back();
         this.toastr.success('Success login!', 'Films Service');
       })

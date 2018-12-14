@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { User } from 'src/models/user';
 import { Observable } from 'rxjs';
-import { catchError, map, tap } from 'rxjs/operators';
+import { tap } from 'rxjs/operators';
 import { loginUrl, registerUrl } from './consts'
 
 const httpOptions = {
@@ -31,7 +31,6 @@ export class AuthService {
     return this.http.post(registerUrl, user, httpOptions)
     .pipe(
       tap(data => {      
-        // sessionStorage.setItem('jwt_token', data.access_token);
       })
     );
   }

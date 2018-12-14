@@ -24,7 +24,15 @@
             ],
             "styles": [
               "src/styles.css",
-              "node_modules/videogular2/fonts/videogular.css"
+              "node_modules/videogular2/fonts/videogular.css",
+              "src/assets/comments.component.css",
+              "src/assets/film-more-info.component.css",
+              "src/assets/film.component.css",
+              "src/assets/films-list.component.css",
+              "src/assets/login.component.css",
+              "src/assets/nav-bar.component.css",
+              "src/assets/register.component.css",
+              "src/assets/validator.component.css"
             ],
             "scripts": []
           },

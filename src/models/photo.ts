@@ -1,6 +1,5 @@
-export class Rating {
-    mark: number;
-    filmId: number;
+export class Photo {
+    src: string;
 
     constructor(props) {
         Object.assign(this, props);

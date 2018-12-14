@@ -1,0 +1,10 @@
+.alert-danger {
+    border: 1px solid;
+    border-radius: 5px 5px;
+    margin: 5px 0px;
+    padding: 5px 5px 5px 50px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    color: #D8000C;
+    background-color: #FFBABA;
+}

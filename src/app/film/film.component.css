@@ -1,0 +1,30 @@
+.film-card {
+    width: 345px;
+    height: 650px;
+    margin: 20px 10px;
+    background-color: white;
+    border-radius: 4px 4px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.media {
+    height: 80%;
+    width: 100%;
+    border-radius: 4px 4px 0px 0px;
+}
+
+.title {
+    width: 345px;
+    text-align: center;
+}
+
+.stars {
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    max-height: 36px;
+}

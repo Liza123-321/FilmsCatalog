@@ -1,0 +1,64 @@
+.top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.card-comment {
+    width: 600px;
+    background-color: DarkGrey;
+    border-radius: 4px 4px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+}
+
+.card {
+    max-width: 900px;
+    padding: 0 100px;
+    background-color: white;
+    border-radius: 4px 4px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.userName {
+    padding-top: 5px;
+    color: #834bff;
+    font-size: 16px;
+}
+
+.commentMessage {
+    padding-top: 10px;
+    padding-left: 10px;
+    font-size: 16px;
+}
+
+.commentData {
+    font-size: 12px;
+    padding-top: 10px;
+    color: grey;
+}
+
+.column {
+    display: flex;
+    width: 400px;
+    flex-direction: column;
+}
+
+.avatar {
+    margin: 10px;
+    padding-top: 5px;
+}
+
+.textField {
+    margin: 10px;
+    width: 450px;
+}
+
+.send-button {
+    margin: 10px auto;
+    width: 120px;
+}
